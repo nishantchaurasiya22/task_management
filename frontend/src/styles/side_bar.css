@@ -1,0 +1,9 @@
+.side_bar{
+    height: 10vh;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+   
+    justify-content: space-between;
+    padding:2rem;
+}

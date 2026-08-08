@@ -1,0 +1,29 @@
+.form_btn {
+    width: 100%;
+    border: none;
+    padding: 0.3rem 1rem;
+    outline: none;
+    color: white;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    position: relative;
+    background: linear-gradient(90deg, rgba(12, 92, 123, 0.512) 0%, rgba(34, 36, 161, 0.381) 100%);
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+.form_btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(12, 91, 123, 0.786) 0%, rgba(34, 36, 161, 0.693) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.form_btn:hover::before {
+    opacity: 1;
+}

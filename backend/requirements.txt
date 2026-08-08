@@ -1,0 +1,7 @@
+fastapi[standard]
+psycopg2_binary
+uvicorn
+pydantic_settings
+pydantic[email]
+PyJWT
+pwdlib[argon2]

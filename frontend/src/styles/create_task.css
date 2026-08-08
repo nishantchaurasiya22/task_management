@@ -1,0 +1,33 @@
+.create_task_container {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  justify-content: center;
+  width: 100%;
+}
+.task_container{
+  width: 40%;
+}
+input{
+  width: 75%;
+  border:1px solid rgba(0, 0, 0, 0.271);
+  outline: none;
+  padding:0.5rem 1.2rem;
+  border-radius: 100px;
+}
+
+label{
+    font-size: 1.2rem;
+}
+
+.req {
+  color: red;
+  position: relative;
+  top: -5px;
+  left: 5px;
+}
+
+.form_btn {
+  flex: none;      
+ width: auto;  
+}
