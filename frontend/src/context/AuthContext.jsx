@@ -7,7 +7,7 @@ export const AuthProvider=({children})=>{
 const[isAuthenticated,setIsAuthenticated]=useState(false)
 const[loading,setLoading]=useState(true)
 const[user,setUser]=useState(null)
-const[err,setErr]=useState(true)
+
 
 useEffect(() => {
   const checkUser = async () => {
@@ -15,18 +15,14 @@ useEffect(() => {
       const res = await CheckAuthAPI(); 
       setIsAuthenticated(true);
       setUser(res.user || res);
-      setErr(false)
-
     } catch {
       setIsAuthenticated(false);
       setUser(null);
-      setErr(true)
     } finally {
       setLoading(false);
     }
   };
-
-  checkUser();
+checkUser()
 }, []);
 const login=async(data)=>{
     const res=await LogInUserAPI(data)

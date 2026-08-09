@@ -5,6 +5,7 @@
     outline: none;
     color: white;
     border-radius: 100px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     font-size: 0.8rem;
     position: relative;
     background: linear-gradient(90deg, rgba(12, 92, 123, 0.512) 0%, rgba(34, 36, 161, 0.381) 100%);

@@ -1,33 +1,54 @@
-.create_task_container {
+.task_container {
   display: flex;
+
+  gap: 1rem;
   align-items: center;
   padding: 2rem;
   justify-content: center;
   width: 100%;
+
 }
-.task_container{
-  width: 40%;
+.task_container_child{
+  position: relative;
+  width: 30%;
 }
 input{
-  width: 75%;
+  width: 95%;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.685);
   border:1px solid rgba(0, 0, 0, 0.271);
   outline: none;
   padding:0.5rem 1.2rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   border-radius: 100px;
 }
 
-label{
-    font-size: 1.2rem;
+.req_message{
+    color: red;
+  position:absolute;
+  bottom: -10px;
+  left: 0;
 }
-
 .req {
   color: red;
-  position: relative;
-  top: -5px;
-  left: 5px;
+  position:absolute;
+  top: 0;
+  left: 20;
 }
 
 .form_btn {
   flex: none;      
  width: auto;  
+}
+
+
+
+@media (max-width: 768px) {
+  .task_container{
+    flex-wrap: wrap;
+    gap: 1.3rem;
+  }
+  .task_container_child{
+  width: 100%;
+}
 }

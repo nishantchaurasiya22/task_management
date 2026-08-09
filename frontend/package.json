@@ -10,10 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.12.0",
     "axios": "^1.19.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-hook-form": "^7.84.0",
+    "react-redux": "^9.3.0",
     "react-router": "^8.3.0",
     "react-toastify": "^11.1.0",
     "run": "^1.5.0"

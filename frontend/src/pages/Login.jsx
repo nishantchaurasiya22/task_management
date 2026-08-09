@@ -14,9 +14,7 @@ const Login = () => {
   await login(data)
   toast.success(`Welcome back ${data.identifier} `)
   navigate("/home") 
-  }catch(err){
-    console.log(err);
-    
+  }catch(err){ 
     toast.error(err.response?.data?.detail || "Login failed")
     reset()
   }
