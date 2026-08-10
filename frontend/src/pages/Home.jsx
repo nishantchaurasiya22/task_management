@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className='home_page'>
       <Header/>
-      <div>
+      <div className="task_manage">
        <Create_Task/>
        <Manage_Tasks/>
       </div>

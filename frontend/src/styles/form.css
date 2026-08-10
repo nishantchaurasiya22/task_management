@@ -23,7 +23,7 @@
     text-align: center;
 }
 .link_text{
-    color: blue;
+    color: rgba(149, 4, 4, 0.434);
     cursor: pointer;
 }
 .link_text:hover{

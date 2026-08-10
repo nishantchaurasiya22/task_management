@@ -7,4 +7,7 @@
     align-items: center;
     justify-content: space-between;
     padding:2rem;
+    font-size: 1.3rem;
+    color: #333333ad;
+    font-weight: 700;
 }

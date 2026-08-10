@@ -12,13 +12,9 @@ const Create_Task = () => {
         try{
             const res=await CreateTaskAPI(data)
             dispatch(addTask(res))
-            toast.success("Task created")
             reset()
         }catch(err){
-            console.log(err)
-            
             toast.error("Something Wrong")
-            reset()
         }
     }
     return (

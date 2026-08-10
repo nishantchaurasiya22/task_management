@@ -3,3 +3,8 @@
     min-height: 100vh;
    background-color: #706c6c83;
 }
+.task_manage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
