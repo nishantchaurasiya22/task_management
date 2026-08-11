@@ -170,82 +170,6 @@ PostgreSQL is used to store user and task data.
 
 Each task is connected to the user who created it. This allows the backend to return only the tasks belonging to the logged-in user.
 
-## Getting Started
-
-### Prerequisites
-
-Make sure you have these installed:
-
-* Python
-* Node.js
-* PostgreSQL
-* Git
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/nishantchaurasiya22/task_management.git
-
-cd task_management
-```
-
-### 2. Backend Setup
-
-Go to the backend folder:
-
-```bash
-cd backend
-```
-
-Create a virtual environment:
-
-```bash
-python -m venv venv
-```
-
-Activate it on Windows:
-
-```bash
-venv\Scripts\activate
-```
-
-Install the required packages:
-
-```bash
-pip install -r requirements.txt
-```
-
-Create your environment variables according to the configuration used by the backend.
-
-Do not add your real database password or secret keys to GitHub.
-
-Start the FastAPI server:
-
-```bash
-uvicorn app.main:app --reload
-```
-
-### 3. Frontend Setup
-
-Open another terminal and go to the frontend folder:
-
-```bash
-cd frontend
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Start the development server:
-
-```bash
-npm run dev
-```
-
-Open the local URL shown by Vite in your browser.
 
 ## What I Learned
 
@@ -266,26 +190,3 @@ Some of the main things I practiced were:
 * Organizing backend code into different layers
 * Connecting users with their own tasks
 
-## Future Improvements
-
-Some features I would like to add in the future:
-
-* Task priorities
-* Due dates
-* Task search and filtering
-* Better task sorting
-* More detailed dashboard
-* Email notifications
-* Improved mobile UI
-* Deployment with a live frontend and backend
-
-## Author
-
-**Nishant Chaurasiya**
-
-GitHub:
-https://github.com/nishantchaurasiya22
-
-## Repository
-
-https://github.com/nishantchaurasiya22/task_management
