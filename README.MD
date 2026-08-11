@@ -30,7 +30,6 @@ The app allows users to create an account, log in, create tasks, view their task
 * Axios
 * React Hook Form
 * React Toastify
-* SCSS
 
 ### Backend
 
