@@ -21,7 +21,7 @@ const Manage_Tasks = () => {
   },[])
   return (
    <div className='task-section'>
-    {tasks.length===0?(<p className='no_task'>No task! Create first task</p>):(tasks.map(task=> <Task title={task.title} description={task.description} status={task.is_completed}  key={task.id} /> ))}
+    {tasks.length===0?(<p className='no_task'>No task! Create first task</p>):(tasks.map(task=> <Task id={task.id} title={task.title} description={task.description} status={task.is_completed}  key={task.id} /> ))}
    </div>
   )
 }

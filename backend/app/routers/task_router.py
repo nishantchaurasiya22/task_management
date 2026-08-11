@@ -23,7 +23,7 @@ def task(task_id:int,current_user:dict=Depends(get_current_user)):
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,detail="Task not found")
     return result
 
-@task_router.put("/updated_task/{task_id}",response_model=ResponseTask,status_code=status.HTTP_200_OK)
+@task_router.patch("/updated_task/{task_id}",response_model=ResponseTask,status_code=status.HTTP_200_OK)
 def up_task(task:UpdateTask,task_id:int,current_user:dict=Depends(get_current_user)):
     user_id=int(current_user.get("sub"))
     result=updated_task(task.is_completed,task_id,user_id)

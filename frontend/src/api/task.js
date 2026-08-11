@@ -10,3 +10,12 @@ export const GetAllTasksAPI=async()=>{
     return response.data
 }
 
+export const DeleteTaskAPI=async(id)=>{
+  const response=await axiosInstance.delete(`/tasks/delete_task/${id}`)
+  return response.data
+}
+
+export const UpdateTaskAPI=async(id,data)=>{
+    const response=await axiosInstance.patch(`/tasks/updated_task/${id}`,data)
+    return response.data
+}

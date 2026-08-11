@@ -11,10 +11,9 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .no_task{
-
-     font-size: 1.3rem;
-    color: #333333ad;
-    font-weight: 700;
+  font-size: 1.3rem;
+  color: #333333ad;
+  font-weight: 700;
 }
 .task {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -49,7 +48,6 @@
   background-color: rgba(255, 255, 255, 0.411);
   padding: 1rem 2rem;
 }
-
 
 .details{
     line-height: 1.1;

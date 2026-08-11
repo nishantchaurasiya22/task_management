@@ -20,3 +20,9 @@ export const CheckAuthAPI=async()=>{
   const response=await axiosInstance.get("/auth/me")
   return response.data
 }
+
+
+export const DeleteTaskAPI=async()=>{
+    const response=await axiosInstance.delete(`/tasks/deleted_task/${id}`)
+    return response.data
+}
