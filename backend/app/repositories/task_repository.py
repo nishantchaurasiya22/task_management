@@ -42,24 +42,6 @@ def get_all_tasks(user_id:int)->list:
         cur.close()
         release_connection(conn)
 
-def get_task(task_id:int,user_id:int)->dict:
-    conn=get_connection()
-    cur=conn.cursor(cursor_factory=RealDictCursor)
-    try:
-        cur.execute(
-            """
-             SELECT id,title,description,is_completed
-             FROM tasks
-             WHERE id=%s AND user_id=%s
-            """,
-            (task_id,user_id)
-        )
-        result=cur.fetchone()
-        return result
-    finally:
-        cur.close()
-        release_connection(conn)
-
 def update_task(is_completed:bool,task_id:int,user_id:int)->dict:
     conn=get_connection()
     cur=conn.cursor(cursor_factory=RealDictCursor)

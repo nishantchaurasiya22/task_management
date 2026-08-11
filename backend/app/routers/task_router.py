@@ -1,7 +1,7 @@
 from fastapi import APIRouter,status,Depends,HTTPException
 task_router=APIRouter(prefix="/tasks",tags=["tasks"])
 from app.models.task_model import CreateTask,UpdateTask,ResponseTask
-from app.services.task_service import new_task,all_tasks,get_task,updated_task,deleted_task
+from app.services.task_service import new_task,all_tasks,updated_task,deleted_task
 from app.dependencies import get_current_user
 from typing import List
 
@@ -14,14 +14,6 @@ def create_task(task:CreateTask,current_user:dict=Depends(get_current_user)):
 def tasks(current_user:dict=Depends(get_current_user)):
     user_id=int(current_user.get("sub"))
     return all_tasks(user_id)
-
-@task_router.get("/get_task/{task_id}",response_model=ResponseTask,status_code=status.HTTP_200_OK)
-def task(task_id:int,current_user:dict=Depends(get_current_user)):
-    user_id=int(current_user.get("sub"))
-    result=get_task(task_id,user_id)
-    if not result:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,detail="Task not found")
-    return result
 
 @task_router.patch("/updated_task/{task_id}",response_model=ResponseTask,status_code=status.HTTP_200_OK)
 def up_task(task:UpdateTask,task_id:int,current_user:dict=Depends(get_current_user)):
