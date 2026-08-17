@@ -37,7 +37,9 @@ def login(credentials:UserLogin,response:Response)->dict:
             key="access_token",
             value=token,
             httponly=True,
-        )
+            secure=True,
+            samesite="none"
+)
         return{
             "message":"Login successfully",
             "user_name": user["user_name"]
